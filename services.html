@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HostelHub - Services</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🏫 HostelHub
+        </div>
+
+        <a href="index.html">
+            📊 Dashboard
+        </a>
+
+        <a href="services.html"
+           class="active">
+            🏠 Hostel Services
+        </a>
+
+        <a href="complaints.html">
+            🛠 Complaints
+        </a>
+
+        <button
+            class="logout-btn"
+            onclick="logout()">
+
+            🚪 Logout
+
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Hostel Services
+                </h1>
+
+                <p id="serviceStudent">
+                    Student Services
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- FEES -->
+
+        <section class="service-box">
+
+            <div class="service-heading">
+
+                <h2>
+                    💰 Hostel Fees
+                </h2>
+
+                <span class="success">
+                    Paid
+                </span>
+
+            </div>
+
+
+            <div class="fee-details">
+
+                <div>
+
+                    <p>
+                        Total Fee
+                    </p>
+
+                    <h2 id="totalFee">
+                        ₹0
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        Paid Amount
+                    </p>
+
+                    <h2 id="paidFee">
+                        ₹0
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        Due Amount
+                    </p>
+
+                    <h2 id="dueFee">
+                        ₹0
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ROOM -->
+
+        <section class="service-box">
+
+            <h2>
+                🛏️ Room Details
+            </h2>
+
+            <div class="room-details">
+
+                <p>
+                    <strong>Student:</strong>
+                    <span id="serviceName"></span>
+                </p>
+
+                <p>
+                    <strong>Register Number:</strong>
+                    <span id="serviceRoll"></span>
+                </p>
+
+                <p>
+                    <strong>Hostel:</strong>
+                    <span id="serviceHostel"></span>
+                </p>
+
+                <p>
+                    <strong>Room Number:</strong>
+                    <span id="serviceRoom"></span>
+                </p>
+
+                <p>
+                    <strong>Room Type:</strong>
+                    2 Sharing
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOD -->
+
+        <section class="service-box">
+
+            <h2>
+                🍱 Today's Mess Menu
+            </h2>
+
+            <div class="menu-grid">
+
+                <div>
+                    <span>
+                        🌅 Breakfast
+                    </span>
+
+                    <p>
+                        Idli, Sambar & Tea
+                    </p>
+                </div>
+
+
+                <div>
+                    <span>
+                        ☀️ Lunch
+                    </span>
+
+                    <p>
+                        Rice, Dal, Vegetable Curry & Curd
+                    </p>
+                </div>
+
+
+                <div>
+                    <span>
+                        🌆 Snacks
+                    </span>
+
+                    <p>
+                        Biscuits & Tea
+                    </p>
+                </div>
+
+
+                <div>
+                    <span>
+                        🌙 Dinner
+                    </span>
+
+                    <p>
+                        Chapati, Paneer Curry & Rice
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAINTENANCE -->
+
+        <section class="service-box">
+
+            <h2>
+                🔧 Maintenance
+            </h2>
+
+            <p class="service-text">
+                Is there any problem in your room?
+            </p>
+
+            <a href="complaints.html">
+
+                <button>
+                    Report a Problem
+                </button>
+
+            </a>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

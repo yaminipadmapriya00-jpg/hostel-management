@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HostelHub - Complaints</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🏫 HostelHub
+        </div>
+
+        <a href="index.html">
+            📊 Dashboard
+        </a>
+
+        <a href="services.html">
+            🏠 Hostel Services
+        </a>
+
+        <a href="complaints.html"
+           class="active">
+            🛠 Complaints
+        </a>
+
+        <button
+            class="logout-btn"
+            onclick="logout()">
+
+            🚪 Logout
+
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Complaints & Problems
+                </h1>
+
+                <p>
+                    Report and track your hostel problems.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- COMPLAINT FORM -->
+
+        <section class="complaint-form">
+
+            <h2>
+                📝 Report a Problem
+            </h2>
+
+            <form id="complaintForm">
+
+                <label for="category">
+                    Problem Category
+                </label>
+
+                <select id="category"
+                        required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Electrical">
+                        Electrical
+                    </option>
+
+                    <option value="Plumbing">
+                        Plumbing
+                    </option>
+
+                    <option value="Cleaning">
+                        Cleaning
+                    </option>
+
+                    <option value="Food">
+                        Food / Mess
+                    </option>
+
+                    <option value="Room">
+                        Room
+                    </option>
+
+                    <option value="Internet">
+                        Internet
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <label for="description">
+                    Problem Description
+                </label>
+
+                <textarea
+                    id="description"
+                    placeholder="Describe your problem..."
+                    required>
+                </textarea>
+
+
+                <label for="complaintRoom">
+                    Room Number
+                </label>
+
+                <input
+                    type="text"
+                    id="complaintRoom"
+                    readonly
+                >
+
+
+                <button type="submit">
+                    Submit Complaint
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- COMPLAINT LIST -->
+
+        <section class="complaint-list">
+
+            <h2>
+                📋 My Complaints
+            </h2>
+
+            <div id="complaintsContainer">
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

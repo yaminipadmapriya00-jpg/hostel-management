@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HostelHub - Dashboard</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🏫 HostelHub
+        </div>
+
+        <a href="index.html"
+           class="active">
+            📊 Dashboard
+        </a>
+
+        <a href="services.html">
+            🏠 Hostel Services
+        </a>
+
+        <a href="complaints.html">
+            🛠 Complaints
+        </a>
+
+        <button
+            class="logout-btn"
+            onclick="logout()">
+
+            🚪 Logout
+
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1 id="welcome">
+                    Welcome 👋
+                </h1>
+
+                <p>
+                    Manage your college hostel information.
+                </p>
+
+            </div>
+
+            <div class="profile"
+                 id="studentName">
+
+                Student
+
+            </div>
+
+        </header>
+
+
+        <!-- STUDENT INFORMATION -->
+
+        <section class="student-card">
+
+            <div>
+
+                <h2>
+                    Student Information
+                </h2>
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="name"></span>
+                </p>
+
+                <p>
+                    <strong>Register Number:</strong>
+                    <span id="roll"></span>
+                </p>
+
+                <p>
+                    <strong>Hostel:</strong>
+                    <span id="hostel"></span>
+                </p>
+
+                <p>
+                    <strong>Room:</strong>
+                    <span id="room"></span>
+                </p>
+
+            </div>
+
+            <div class="room-icon">
+                🛏️
+            </div>
+
+        </section>
+
+
+        <!-- DASHBOARD CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    💰
+                </div>
+
+                <h3>
+                    Hostel Fees
+                </h3>
+
+                <p class="amount"
+                   id="fee">
+                    ₹0
+                </p>
+
+                <span class="success">
+                    Paid
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🛏️
+                </div>
+
+                <h3>
+                    Room
+                </h3>
+
+                <p class="amount"
+                   id="roomCard">
+                    -
+                </p>
+
+                <span class="info">
+                    2 Sharing
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🍱
+                </div>
+
+                <h3>
+                    Today's Food
+                </h3>
+
+                <p class="amount">
+                    Available
+                </p>
+
+                <span class="success">
+                    Mess Open
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    Complaints
+                </h3>
+
+                <p class="amount"
+                   id="complaintCount">
+                    0
+                </p>
+
+                <span class="warning">
+                    Pending
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <h2 class="section-title">
+            Quick Actions
+        </h2>
+
+        <div class="quick-actions">
+
+            <a href="services.html"
+               class="action">
+
+                <span>💰</span>
+
+                <p>
+                    View Fees
+                </p>
+
+            </a>
+
+
+            <a href="services.html"
+               class="action">
+
+                <span>🍱</span>
+
+                <p>
+                    Mess Menu
+                </p>
+
+            </a>
+
+
+            <a href="complaints.html"
+               class="action">
+
+                <span>🔧</span>
+
+                <p>
+                    Report Problem
+                </p>
+
+            </a>
+
+
+            <a href="services.html"
+               class="action">
+
+                <span>🛏️</span>
+
+                <p>
+                    Room Details
+                </p>
+
+            </a>
+
+        </div>
+
+
+        <!-- NOTICE -->
+
+        <section class="notice">
+
+            <h2>
+                📢 Hostel Notice
+            </h2>
+
+            <p>
+                Students are requested to maintain
+                cleanliness in their rooms and common areas.
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,801 @@
+/* ==========================================
+   GENERAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   LOGIN
+========================================== */
+
+.login-body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #0f172a
+    );
+}
+
+
+.login-container {
+    width: 410px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.2);
+}
+
+
+.login-logo {
+    text-align: center;
+
+    font-size: 60px;
+
+    margin-bottom: 10px;
+}
+
+
+.login-container h1 {
+    text-align: center;
+
+    color: #1d4ed8;
+
+    margin-bottom: 8px;
+}
+
+
+.login-subtitle {
+    text-align: center;
+
+    color: #64748b;
+
+    margin-bottom: 30px;
+}
+
+
+.login-container label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-top: 18px;
+
+    margin-bottom: 7px;
+}
+
+
+.login-container input,
+.complaint-form input,
+.complaint-form select,
+.complaint-form textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.login-container input:focus,
+.complaint-form input:focus,
+.complaint-form select:focus,
+.complaint-form textarea:focus {
+
+    border-color: #2563eb;
+}
+
+
+button {
+    background: #2563eb;
+
+    color: white;
+
+    padding: 13px 20px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-top: 18px;
+}
+
+
+button:hover {
+    background: #1d4ed8;
+}
+
+
+.login-container button {
+    width: 100%;
+}
+
+
+.login-error {
+    color: #dc2626;
+
+    text-align: center;
+
+    margin-top: 12px;
+}
+
+
+.demo-login {
+    margin-top: 25px;
+
+    padding: 18px;
+
+    background: #eff6ff;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    color: #334155;
+}
+
+
+.demo-login h3 {
+    color: #1d4ed8;
+
+    margin-bottom: 10px;
+}
+
+
+.demo-login p {
+    margin: 5px;
+}
+
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.layout {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar {
+    width: 250px;
+
+    background: #0f172a;
+
+    color: white;
+
+    padding: 25px 15px;
+
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+.logo {
+    font-size: 21px;
+
+    font-weight: bold;
+
+    padding: 10px 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.sidebar a {
+    display: block;
+
+    padding: 14px 15px;
+
+    margin-bottom: 7px;
+
+    border-radius: 8px;
+
+    color: #cbd5e1;
+}
+
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+.logout-btn {
+    width: 100%;
+
+    background: #334155;
+
+    margin-top: 25px;
+}
+
+
+.logout-btn:hover {
+    background: #dc2626;
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.main {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    padding: 30px;
+}
+
+
+.topbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+
+.topbar h1 {
+    font-size: 28px;
+
+    margin-bottom: 7px;
+}
+
+
+.topbar p {
+    color: #64748b;
+}
+
+
+.profile {
+    background: white;
+
+    padding: 12px 18px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.08);
+}
+
+
+/* ==========================================
+   STUDENT CARD
+========================================== */
+
+.student-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.06);
+}
+
+
+.student-card h2 {
+    margin-bottom: 15px;
+}
+
+
+.student-card p {
+    margin: 8px 0;
+
+    color: #475569;
+}
+
+
+.room-icon {
+    font-size: 75px;
+}
+
+
+/* ==========================================
+   DASHBOARD CARDS
+========================================== */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.card {
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.06);
+}
+
+
+.card-icon {
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+
+.amount {
+    font-size: 23px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.success,
+.info,
+.warning {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.success {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+
+.info {
+    background: #dbeafe;
+
+    color: #1d4ed8;
+}
+
+
+.warning {
+    background: #fef3c7;
+
+    color: #b45309;
+}
+
+
+/* ==========================================
+   QUICK ACTIONS
+========================================== */
+
+.section-title {
+    margin-top: 35px;
+
+    margin-bottom: 18px;
+}
+
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.action {
+    background: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.06);
+
+    transition: 0.2s;
+}
+
+
+.action:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.1);
+}
+
+
+.action span {
+    font-size: 35px;
+}
+
+
+.action p {
+    margin-top: 12px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   NOTICE
+========================================== */
+
+.notice {
+    background: #eff6ff;
+
+    border-left: 5px solid #2563eb;
+
+    padding: 20px;
+
+    margin-top: 30px;
+
+    border-radius: 8px;
+}
+
+
+.notice h2 {
+    margin-bottom: 8px;
+}
+
+
+/* ==========================================
+   SERVICES
+========================================== */
+
+.service-box {
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.06);
+}
+
+
+.service-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.fee-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.fee-details div {
+    background: #f8fafc;
+
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+
+.fee-details p {
+    color: #64748b;
+
+    margin-bottom: 8px;
+}
+
+
+.room-details {
+    margin-top: 20px;
+}
+
+
+.room-details p {
+    margin: 12px 0;
+
+    color: #475569;
+}
+
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin-top: 20px;
+}
+
+
+.menu-grid div {
+    background: #f8fafc;
+
+    padding: 18px;
+
+    border-radius: 10px;
+}
+
+
+.menu-grid span {
+    font-weight: bold;
+
+    color: #1d4ed8;
+}
+
+
+.menu-grid p {
+    margin-top: 8px;
+}
+
+
+.service-text {
+    margin-top: 15px;
+
+    color: #64748b;
+}
+
+
+/* ==========================================
+   COMPLAINT FORM
+========================================== */
+
+.complaint-form,
+.complaint-list {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.06);
+}
+
+
+.complaint-form h2,
+.complaint-list h2 {
+    margin-bottom: 20px;
+}
+
+
+.complaint-form label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+}
+
+
+.complaint-form textarea {
+    height: 120px;
+
+    resize: vertical;
+}
+
+
+/* ==========================================
+   COMPLAINT CARDS
+========================================== */
+
+.complaint-card {
+    background: #f8fafc;
+
+    border-left: 5px solid #2563eb;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    margin-top: 15px;
+}
+
+
+.complaint-card h3 {
+    margin-bottom: 12px;
+
+    color: #1d4ed8;
+}
+
+
+.complaint-card p {
+    margin: 8px 0;
+
+    color: #475569;
+}
+
+
+.status {
+    display: inline-block;
+
+    margin-top: 8px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: #fef3c7;
+
+    color: #b45309;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.empty-message {
+    color: #64748b;
+
+    padding: 20px 0;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .cards,
+    .quick-actions {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main {
+        margin-left: 200px;
+
+        width: calc(100% - 200px);
+
+        padding: 20px;
+    }
+
+    .cards,
+    .quick-actions,
+    .fee-details,
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        min-height: auto;
+    }
+
+    .layout {
+        display: block;
+    }
+
+    .main {
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+    .student-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .topbar {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}
